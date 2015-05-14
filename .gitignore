@@ -2,3 +2,5 @@
 *.war
 *.ear
 *.class
+.idea/
+target/
