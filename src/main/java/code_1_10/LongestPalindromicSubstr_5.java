@@ -9,8 +9,37 @@ package code_1_10;
  */
 public class LongestPalindromicSubstr_5 {
     public String longestPalindrome(String s) {
-        
-        
-        return null;
+        if (s == null) return null;
+        char[] str = s.toCharArray();
+        int maxLen = 0;
+        int [] max = new int[2];
+        int pos = 0;
+        while (pos < str.length - 1) {
+            if (str[pos] == str[pos + 1]) {
+                for(int i = 0;i <= Math.min(pos,str.length - pos);i ++) {
+                    if ((pos + i + 1) > str.length - 1) break;
+                    if (str[pos - i] == str[pos + i + 1]) {
+                        if (2 * i + 2 >maxLen) {
+                            max[0] = pos - i;
+                            max[1] = pos + i + 1;
+                            maxLen = 2 * i + 2;
+                        }
+                    } else break;
+                }
+            }
+            for (int i = 0;i <= Math.min(pos,str.length - pos + 1);i ++) {
+                if ((pos + i) > str.length - 1) break;
+                if (str[pos - i] == str[pos + i]) {
+                    if (2 * i + 1 >maxLen) {
+                        max[0] = pos - i;
+                        max[1] = pos + i;
+                        maxLen = 2 * i + 1;
+                    }
+                } else break;
+            }
+            pos ++;
+        }
+
+        return s.substring(max[0],max[1] + 1);
     }
 }
