@@ -30,7 +30,7 @@ public class ZigZagConversion_6Test {
     @Test
     public void testConvert() throws Exception {
         String s = "abcdefghijklmnopqrstuvwxyz";
-        String ret = zigzag.convert(s,5);
+        String ret = zigzag.convert(s, 5);
         Assert.assertTrue(ret.equals("aiqybhjprxzcgkoswdflntvemu"));
     }
 

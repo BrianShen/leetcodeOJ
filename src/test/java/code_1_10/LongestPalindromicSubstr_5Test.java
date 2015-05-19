@@ -14,6 +14,7 @@ import org.junit.After;
  */
 public class LongestPalindromicSubstr_5Test {
     private LongestPalindromicSubstr_5 lps;
+
     @Before
     public void before() throws Exception {
         lps = new LongestPalindromicSubstr_5();

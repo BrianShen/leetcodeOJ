@@ -29,9 +29,9 @@ public class TwoSum_1Test {
      */
     @Test
     public void testTwoSum() throws Exception {
-        int[] arr = new int[] {2,3,6,4,11,8,9,5,34,23};
+        int[] arr = new int[]{2, 3, 6, 4, 11, 8, 9, 5, 34, 23};
         int target = 19;
-        int[] ret = twoSum_1.twoSum(arr,target);
+        int[] ret = twoSum_1.twoSum(arr, target);
         Assert.assertTrue(ret.length == 2);
         Assert.assertTrue(ret[0] == 5);
         Assert.assertTrue(ret[1] == 6);
